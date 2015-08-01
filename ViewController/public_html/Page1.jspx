@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
+                         id="pt1">
+          <f:facet name="center">
+            <af:group id="g1">
+              <af:commandButton text="commandButton 1" id="cb1"
+                                action="#{pageFlowScope.Bean2.cb1_action}"/>
+              <af:commandButton text="commandButton 2" id="cb2" action="hello"/>
+              <af:panelFormLayout id="pfl1">
+                <af:inputText value="#{bindings.nCelcius.inputValue}"
+                              label="#{bindings.nCelcius.hints.label}"
+                              required="#{bindings.nCelcius.hints.mandatory}"
+                              columns="#{bindings.nCelcius.hints.displayWidth}"
+                              maximumLength="#{bindings.nCelcius.hints.precision}"
+                              shortDesc="#{bindings.nCelcius.hints.tooltip}"
+                              id="it1">
+                  <f:validator binding="#{bindings.nCelcius.validator}"/>
+                </af:inputText>
+                <af:commandButton actionListener="#{bindings.CelciusToFahrenheit.execute}"
+                                  text="CelciusToFahrenheit"
+                                  disabled="#{!bindings.CelciusToFahrenheit.enabled}"
+                                  id="cb3"/>
+                <af:panelLabelAndMessage label="#{bindings.Return.hints.label}"
+                                         id="plam1">
+                  <af:outputFormatted value="#{bindings.Return.inputValue}"
+                                      id="of1"/>
+                </af:panelLabelAndMessage>
+              </af:panelFormLayout>
+            </af:group>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:Bean2-->
+</jsp:root>

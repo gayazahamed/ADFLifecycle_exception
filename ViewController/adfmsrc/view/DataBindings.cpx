@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="view" ClientType="Generic"
+             ErrorHandlerClass="view.exception.ModelExceptionHandler">
+  <pageMap>
+    <page path="/Page1.jspx" usageId="view_Page1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_Page1PageDef" path="view.pageDefs.Page1PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="tempratureConversion" path="model.tempratureConversion"/>
+  </dataControlUsages>
+</Application>

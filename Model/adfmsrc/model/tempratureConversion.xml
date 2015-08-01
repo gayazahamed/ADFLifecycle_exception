@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="tempratureConversion" Package="model"
+          BeanClass="model.tempratureConversion" isJavaBased="false">
+  <MethodAccessor IsCollection="false" Type="java.math.BigDecimal"
+                  id="WindChillInFahrenheit" ReturnNodeName="Return">
+    <ParameterInfo id="nFahrenheit" Type="java.math.BigDecimal"
+                   isStructured="false"/>
+    <ParameterInfo id="nWindSpeed" Type="java.math.BigDecimal"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.math.BigDecimal"
+                  id="WindChillInCelcius" ReturnNodeName="Return">
+    <ParameterInfo id="nCelcius" Type="java.math.BigDecimal"
+                   isStructured="false"/>
+    <ParameterInfo id="nWindSpeed" Type="java.math.BigDecimal"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.math.BigDecimal"
+                  id="FahrenheitToCelcius" ReturnNodeName="Return">
+    <ParameterInfo id="nFahrenheit" Type="java.math.BigDecimal"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="java.math.BigDecimal"
+                  id="CelciusToFahrenheit" ReturnNodeName="Return">
+    <ParameterInfo id="nCelcius" Type="java.math.BigDecimal"
+                   isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

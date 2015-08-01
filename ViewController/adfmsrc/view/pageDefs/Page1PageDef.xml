@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.64.93" id="Page1PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.math.BigDecimal" Name="CelciusToFahrenheit_Return"
+                IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.CelciusToFahrenheit.result}"/>
+      <variable Type="java.math.BigDecimal" Name="CelciusToFahrenheit_nCelcius"
+                IsQueriable="false"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <methodAction id="CelciusToFahrenheit" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="CelciusToFahrenheit"
+                  IsViewObjectMethod="false" DataControl="tempratureConversion"
+                  InstanceName="tempratureConversion"
+                  ReturnName="data.tempratureConversion.methodResults.CelciusToFahrenheit_tempratureConversion_CelciusToFahrenheit_result">
+      <NamedData NDName="nCelcius" NDType="java.math.BigDecimal"
+                 NDValue="${bindings.CelciusToFahrenheit_nCelcius}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="nCelcius">
+      <AttrNames>
+        <Item Value="CelciusToFahrenheit_nCelcius"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Return">
+      <AttrNames>
+        <Item Value="CelciusToFahrenheit_Return"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

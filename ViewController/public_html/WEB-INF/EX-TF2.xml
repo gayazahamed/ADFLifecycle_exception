@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="EX-TF2">
+    <default-activity id="__1">Page1</default-activity>
+    <managed-bean id="__4">
+      <managed-bean-name id="__5">Bean1</managed-bean-name>
+      <managed-bean-class id="__3">view.Bean1</managed-bean-class>
+      <managed-bean-scope id="__2">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__6">
+      <managed-bean-name id="__7">Bean2</managed-bean-name>
+      <managed-bean-class id="__9">PLBean2</managed-bean-class>
+      <managed-bean-scope id="__8">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <view id="Page1">
+      <page>/Page1.jspx</page>
+    </view>
+  </task-flow-definition>
+</adfc-config>

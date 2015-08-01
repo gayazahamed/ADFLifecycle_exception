@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+ 
+  <task-flow-definition id="ExceptionTestTF">
+    <default-activity id="__1">Page1</default-activity>
+ 
+    <managed-bean id="__5">
+      <managed-bean-name id="__4">Bean1</managed-bean-name>
+      <managed-bean-class id="__3">view.Bean1</managed-bean-class>
+      <managed-bean-scope id="__2">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__20">
+      <managed-bean-name id="__17">Bean2</managed-bean-name>
+      <managed-bean-class id="__19">PLBean2</managed-bean-class>
+      <managed-bean-scope id="__18">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <view id="Page1">
+      <page>/Page1.jspx</page>
+    </view>
+    <view id="Page2">
+      <page>/Page2.jspx</page>
+    </view>
+    <method-call id="methodCall1">
+      <method>#{requestScope.Bean1.method2}</method>
+      <outcome id="__16">
+        <to-string/>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__6">
+      <from-activity-id id="__7">Page1</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome id="__14">hello</from-outcome>
+        <to-activity-id id="__9">methodCall1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__10">
+      <from-activity-id id="__11">methodCall1</from-activity-id>
+      <control-flow-case id="__13">
+        <to-activity-id id="__12">Page2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

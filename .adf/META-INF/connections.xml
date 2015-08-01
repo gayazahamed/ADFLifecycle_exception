@@ -1,0 +1,513 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="tempratureConversion"
+              className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl"
+              xmlns="">
+      <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+      <RefAddresses>
+         <XmlRefAddr addrType="WebServiceConnection">
+            <Contents>
+               <wsconnection description="http://webservices.daehosting.com/services/TemperatureConversions.wso?WSDL"
+                             service="{http://webservices.daehosting.com/temperature}TemperatureConversions">
+                  <model name="{http://webservices.daehosting.com/temperature}TemperatureConversions"
+                         xmlns="http://oracle.com/ws/model">
+                     <types xmlns="http://oracle.com/oracle/webservices/mdds">
+                        <types-in-elements/>
+                     </types>
+                     <service name="{http://webservices.daehosting.com/temperature}TemperatureConversions">
+                        <port name="TemperatureConversionsSoap"
+                              binding="{http://webservices.daehosting.com/temperature}TemperatureConversionsSoapBinding"
+                              portType="{http://webservices.daehosting.com/temperature}TemperatureConversionsSoapType">
+                           <soap addressUrl="http://webservices.daehosting.com/services/TemperatureConversions.wso"
+                                 xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <operation name="CelciusToFahrenheit">
+                              <soap soapAction=""
+                                    xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""
+                                     message="{http://webservices.daehosting.com/temperature}CelciusToFahrenheitSoapRequest">
+                                 <message style="2" use="1" soapVersion="1"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="CelciusToFahrenheit"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="nCelcius"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name=""
+                                      message="{http://webservices.daehosting.com/temperature}CelciusToFahrenheitSoapResponse">
+                                 <message style="2" use="1" soapVersion="1"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="CelciusToFahrenheitResponse"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="CelciusToFahrenheitResult"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="FahrenheitToCelcius">
+                              <soap soapAction=""
+                                    xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""
+                                     message="{http://webservices.daehosting.com/temperature}FahrenheitToCelciusSoapRequest">
+                                 <message style="2" use="1" soapVersion="1"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="FahrenheitToCelcius"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="nFahrenheit"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name=""
+                                      message="{http://webservices.daehosting.com/temperature}FahrenheitToCelciusSoapResponse">
+                                 <message style="2" use="1" soapVersion="1"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="FahrenheitToCelciusResponse"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="FahrenheitToCelciusResult"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="WindChillInCelcius">
+                              <soap soapAction=""
+                                    xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""
+                                     message="{http://webservices.daehosting.com/temperature}WindChillInCelciusSoapRequest">
+                                 <message style="2" use="1" soapVersion="1"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="WindChillInCelcius"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="nCelcius"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                                <part name="nWindSpeed"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name=""
+                                      message="{http://webservices.daehosting.com/temperature}WindChillInCelciusSoapResponse">
+                                 <message style="2" use="1" soapVersion="1"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="WindChillInCelciusResponse"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="WindChillInCelciusResult"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="WindChillInFahrenheit">
+                              <soap soapAction=""
+                                    xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""
+                                     message="{http://webservices.daehosting.com/temperature}WindChillInFahrenheitSoapRequest">
+                                 <message style="2" use="1" soapVersion="1"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="WindChillInFahrenheit"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="nFahrenheit"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                                <part name="nWindSpeed"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name=""
+                                      message="{http://webservices.daehosting.com/temperature}WindChillInFahrenheitSoapResponse">
+                                 <message style="2" use="1" soapVersion="1"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="WindChillInFahrenheitResponse"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="WindChillInFahrenheitResult"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                        </port>
+                        <port name="TemperatureConversionsSoap12"
+                              binding="{http://webservices.daehosting.com/temperature}TemperatureConversionsSoapBinding12"
+                              portType="{http://webservices.daehosting.com/temperature}TemperatureConversionsSoapType">
+                           <soap addressUrl="http://webservices.daehosting.com/services/TemperatureConversions.wso"
+                                 xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <operation name="CelciusToFahrenheit">
+                              <soap soapAction=""
+                                    xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""
+                                     message="{http://webservices.daehosting.com/temperature}CelciusToFahrenheitSoapRequest">
+                                 <message style="2" use="1" soapVersion="2"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="CelciusToFahrenheit"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="nCelcius"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name=""
+                                      message="{http://webservices.daehosting.com/temperature}CelciusToFahrenheitSoapResponse">
+                                 <message style="2" use="1" soapVersion="2"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="CelciusToFahrenheitResponse"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="CelciusToFahrenheitResult"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="FahrenheitToCelcius">
+                              <soap soapAction=""
+                                    xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""
+                                     message="{http://webservices.daehosting.com/temperature}FahrenheitToCelciusSoapRequest">
+                                 <message style="2" use="1" soapVersion="2"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="FahrenheitToCelcius"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="nFahrenheit"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name=""
+                                      message="{http://webservices.daehosting.com/temperature}FahrenheitToCelciusSoapResponse">
+                                 <message style="2" use="1" soapVersion="2"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="FahrenheitToCelciusResponse"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="FahrenheitToCelciusResult"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="WindChillInCelcius">
+                              <soap soapAction=""
+                                    xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""
+                                     message="{http://webservices.daehosting.com/temperature}WindChillInCelciusSoapRequest">
+                                 <message style="2" use="1" soapVersion="2"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="WindChillInCelcius"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="nCelcius"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                                <part name="nWindSpeed"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name=""
+                                      message="{http://webservices.daehosting.com/temperature}WindChillInCelciusSoapResponse">
+                                 <message style="2" use="1" soapVersion="2"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="WindChillInCelciusResponse"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="WindChillInCelciusResult"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                           <operation name="WindChillInFahrenheit">
+                              <soap soapAction=""
+                                    xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <input name=""
+                                     message="{http://webservices.daehosting.com/temperature}WindChillInFahrenheitSoapRequest">
+                                 <message style="2" use="1" soapVersion="2"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="WindChillInFahrenheit"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="nFahrenheit"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                                <part name="nWindSpeed"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                              <output name=""
+                                      message="{http://webservices.daehosting.com/temperature}WindChillInFahrenheitSoapResponse">
+                                 <message style="2" use="1" soapVersion="2"
+                                          encodingStyle="" docLitWrapped="true"
+                                          namespace="http://webservices.daehosting.com/temperature"
+                                          localPart="WindChillInFahrenheitResponse"
+                                          xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="parameters" required="true"
+                                          xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1"
+                                                       maxOccurs="1">
+                                                <part name="WindChillInFahrenheitResult"
+                                                      required="true"
+                                                      namespace="http://webservices.daehosting.com/temperature"
+                                                      elementQualified="true">
+                                                   <type namespace="http://www.w3.org/2001/XMLSchema"
+                                                         localPart="decimal"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                           </operation>
+                        </port>
+                     </service>
+                  </model>
+               </wsconnection>
+            </Contents>
+         </XmlRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>
