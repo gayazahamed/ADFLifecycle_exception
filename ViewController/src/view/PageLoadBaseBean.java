@@ -25,8 +25,31 @@ public class PageLoadBaseBean implements PagePhaseListener {
      * to do something interesting during the
      * @param event
      */
-    public void beforePhase(PagePhaseEvent event) {
-        System.out.println("aaaaaaaaaaa");
+    public void beforePhase(PagePhaseEvent pagePhaseEvent) {
+     
+        System.out.println("Lifecycle INIT_CONTEXT_ID : " +Lifecycle.INIT_CONTEXT_ID);
+        System.out.println("Lifecycle PREPARE_MODEL_ID : " +Lifecycle.PREPARE_MODEL_ID);
+        System.out.println("Lifecycle APPLY_INPUT_VALUES_ID : " +Lifecycle.APPLY_INPUT_VALUES_ID);
+        System.out.println("Lifecycle VALIDATE_INPUT_VALUES_ID : " +Lifecycle.VALIDATE_INPUT_VALUES_ID);
+        System.out.println("Lifecycle PROCESS_UPDATE_MODEL_ID : " +Lifecycle.PROCESS_UPDATE_MODEL_ID);
+        System.out.println("Lifecycle VALIDATE_MODEL_UPDATES_ID : " +Lifecycle.VALIDATE_MODEL_UPDATES_ID);
+        System.out.println("Lifecycle PROCESS_COMPONENT_EVENTS_ID : " +Lifecycle.PROCESS_COMPONENT_EVENTS_ID);
+        System.out.println("Lifecycle METADATA_COMMIT_ID : " +Lifecycle.METADATA_COMMIT_ID);
+        System.out.println("Lifecycle PREPARE_RENDER_ID : " +Lifecycle.PREPARE_RENDER_ID);
+        System.out.println("    ");
+        System.out.println("PhaseId ANY_PHASE : " +PhaseId.ANY_PHASE);
+        System.out.println("PhaseId RESTORE_VIEW : " +PhaseId.RESTORE_VIEW);
+        System.out.println("PhaseId APPLY_REQUEST_VALUES : " +PhaseId.APPLY_REQUEST_VALUES);
+        System.out.println("PhaseId PROCESS_VALIDATIONS : " +PhaseId.PROCESS_VALIDATIONS);
+        System.out.println("PhaseId UPDATE_MODEL_VALUES : " +PhaseId.UPDATE_MODEL_VALUES);
+        System.out.println("PhaseId INVOKE_APPLICATION : " +PhaseId.INVOKE_APPLICATION);
+        System.out.println("PhaseId RENDER_RESPONSE : " +PhaseId.RENDER_RESPONSE);
+        
+        System.out.println("PhaseId VALUES : " +PhaseId.VALUES);
+            
+        System.out.println("    ");
+        System.out.println("    ");
+        System.out.println("------Before Phase id    : "+pagePhaseEvent.getPhaseId());
         //        FacesPageLifecycleContext ctx =
         //            (FacesPageLifecycleContext)event.getLifecycleContext();
         //        if (event.getPhaseId() == Lifecycle.PREPARE_MODEL_ID) {
@@ -37,6 +60,7 @@ public class PageLoadBaseBean implements PagePhaseListener {
     }
 
     public void afterPhase(PagePhaseEvent pagePhaseEvent) {
+    System.out.println("-----After Phase id    : "+pagePhaseEvent.getPhaseId());
         if (pagePhaseEvent.getPhaseId() == Lifecycle.PREPARE_RENDER_ID) {
             FacesContext facesCtx = FacesContext.getCurrentInstance();
             ExternalContext extCtx = facesCtx.getExternalContext();
