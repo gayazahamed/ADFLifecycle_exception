@@ -9,9 +9,15 @@
       <af:form id="f1">
         <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx"
                          id="pt1">
-          <f:facet name="center"/>
+          <f:facet name="center">
+            <af:group id="g1">
+              <af:commandButton text="commandButton 1" id="cb1"
+                                action="#{pageFlowScope.Bean2.actionMethod}"
+                                actionListener="#{pageFlowScope.Bean2.mehtod1ActionListner}"/>
+              <af:commandButton text="commandButton 2" id="cb2"/>
+            </af:group>
+          </f:facet>
           <f:facet name="header"/>
-          <f:facet name="end"/>
           <f:facet name="start"/>
           <f:facet name="branding"/>
           <f:facet name="copyright"/>
@@ -20,4 +26,5 @@
       </af:form>
     </af:document>
   </f:view>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:Bean2-->
 </jsp:root>

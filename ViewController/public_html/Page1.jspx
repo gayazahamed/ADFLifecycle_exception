@@ -14,7 +14,9 @@
             <af:group id="g1">
               <af:commandButton text="commandButton 1" id="cb1"
                                 action="#{pageFlowScope.Bean2.cb1_action}"/>
-              <af:commandButton text="commandButton 2" id="cb2" action="hello"/>
+              <af:commandButton text="Action hello" id="cb2" action="hello"/>
+             
+              
               <af:panelFormLayout id="pfl1">
                 <af:inputText value="#{bindings.nCelcius.inputValue}"
                               label="#{bindings.nCelcius.hints.label}"
@@ -34,6 +36,8 @@
                   <af:outputFormatted value="#{bindings.Return.inputValue}"
                                       id="of1"/>
                 </af:panelLabelAndMessage>
+                
+                  <af:commandButton text="RestoreView " id="cb4"  />
               </af:panelFormLayout>
             </af:group>
           </f:facet>

@@ -15,5 +15,15 @@
     <view id="Page1">
       <page>/Page1.jspx</page>
     </view>
+    <view id="Page2">
+      <page>/Page2.jspx</page>
+    </view>
+    <control-flow-rule id="__10">
+      <from-activity-id id="__11">Page1</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome id="__14">hello</from-outcome>
+        <to-activity-id id="__13">Page2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
   </task-flow-definition>
 </adfc-config>

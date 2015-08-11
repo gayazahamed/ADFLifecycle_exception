@@ -19,4 +19,29 @@
       <property
          name="x">196.5</property>
    </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">Page2</property>
+      <property
+         name="page">/Page2.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Page2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">366.79883</property>
+      <property
+         name="x">476.5</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">hello</property>
+      <property
+         name="sdm:polyPoints">R50,237.5,308.44824,435.5,366.44824,L50</property>
+   </ControlFlowCase>
 </SDM>
