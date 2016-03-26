@@ -41,6 +41,10 @@
       <value n="oracle.jdevimpl.webservices.WebServicesMigratorHelper" v="11.1.1.1.0"/>
       <value n="oracle.jdevimpl.xml.wl.WeblogicMigratorHelper" v="11.1.1.1.0"/>
       <value n="oracle.modeler.bmmigrate.management.Migration" v="11.1.1.1.0"/>
+      <value n="oracle.tip.tools.ide.bpel.v1.designer.addin.migrator.BPELProjectMigrator" v="11.1.1.1.0"/>
+      <value n="oracle.tip.tools.ide.fabric.addin.SCAProjectMigrator" v="11.1.1.1.0.06"/>
+      <value n="oracle.tip.tools.ide.workflow.addin.TaskFormMigratorAddin" v="11.1.1.1.0"/>
+      <value n="oracle.tip.tools.ide.workflow.addin.WorkflowProjectMigrator" v="11.1.1.1.0.10"/>
       <value n="oracle.toplink.workbench.addin.migration.PersistenceProjectMigrator" v="11.1.1.1.1"/>
       <value n="oracle.toplink.workbench.addin.migration.TopLinkProjectMigrator" v="11.1.1.1.0"/>
       <value n="oracle.webcenter.internal.dt.migration.WebCenterProjectMigrator" v="11.1.1.4.0.101019.0800"/>
@@ -54,6 +58,8 @@
       <string v="oracle.bm.commonIde.data.project.ModelerProjectSettings/modelersContentSet"/>
       <string v="oracle.adfdtinternal.model.ide.settings.ADFMSettings/adfmContentSet"/>
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
+      <string v="oracle.tip.tools.ide.fabric.addin.SCAContentSetProvider/sca-content"/>
+      <string v="oracle.bpm.fusion.repository.BPMProjectSettings/bpmProjectsProcessesContentSet"/>
    </list>
    <value n="defaultPackage" v="view"/>
    <hash n="oracle.ide.model.DependencyConfiguration">
@@ -263,10 +269,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="ADF Model Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="JPS Designtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -280,6 +282,38 @@
          </hash>
          <hash>
             <value n="id" v="Web Service Data Control"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JDeveloper Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="SQLJ Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Connection Manager"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -377,10 +411,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="ADF Model Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="JPS Designtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -394,6 +424,38 @@
          </hash>
          <hash>
             <value n="id" v="Web Service Data Control"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JDeveloper Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="SQLJ Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Model Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Connection Manager"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -448,5 +510,15 @@
             <value n="version" v="1.1"/>
          </hash>
       </list>
+   </hash>
+   <hash n="oracle.toplink.workbench.addin">
+      <hash n="toplinkContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="toplink/"/>
+         </list>
+      </hash>
    </hash>
 </jpr:project>

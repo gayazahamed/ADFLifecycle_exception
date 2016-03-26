@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!--<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="view" ClientType="Generic"
+             ErrorHandlerClass="view.exception.ModelExceptionHandler"> -->
 <Application xmlns="http://xmlns.oracle.com/adfm/application"
              version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
              Package="view" ClientType="Generic"
-             ErrorHandlerClass="view.exception.ModelExceptionHandler">
+             ErrorHandlerClass="model.ModelsExceptionHandler">
   <pageMap>
     <page path="/Page1.jspx" usageId="view_Page1PageDef"/>
+    <page path="/Home.jspx" usageId="view_HomePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_Page1PageDef" path="view.pageDefs.Page1PageDef"/>
+    <page id="view_HomePageDef" path="view.pageDefs.HomePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="tempratureConversion" path="model.tempratureConversion"/>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
   </dataControlUsages>
 </Application>

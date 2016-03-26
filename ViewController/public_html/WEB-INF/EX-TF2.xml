@@ -18,11 +18,46 @@
     <view id="Page2">
       <page>/Page2.jspx</page>
     </view>
+    <view id="error">
+      <page>/error.jspx</page>
+    </view>
+    <method-call id="throwerror">
+      <method>#{pageFlowScope.Bean2.throwErrorss}</method>
+      <outcome id="__39">
+        <to-string/>
+      </outcome>
+    </method-call>
+    <method-call id="handleError">
+      <method>#{pageFlowScope.Bean2.handleError}</method>
+      <outcome id="__40">
+        <to-string/>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__10">
       <from-activity-id id="__11">Page1</from-activity-id>
       <control-flow-case id="__12">
         <from-outcome id="__14">hello</from-outcome>
         <to-activity-id id="__13">Page2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__15">
+      <from-activity-id id="__16">*</from-activity-id>
+      <control-flow-case id="__34">
+        <from-outcome id="__36">error</from-outcome>
+        <to-activity-id id="__35">handleError</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__25">
+      <from-activity-id id="__26">handleError</from-activity-id>
+      <control-flow-case id="__28">
+        <to-activity-id id="__27">error</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__29">
+      <from-activity-id id="__30">Page2</from-activity-id>
+      <control-flow-case id="__32">
+        <from-outcome id="__33">error</from-outcome>
+        <to-activity-id id="__31">throwerror</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

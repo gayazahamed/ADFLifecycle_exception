@@ -44,4 +44,84 @@
       <property
          name="sdm:polyPoints">R50,237.5,308.44824,435.5,366.44824,L50</property>
    </ControlFlowCase>
+   <View
+      id="View5">
+      <property
+         name="activityId">error</property>
+      <property
+         name="page">/error.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>error&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">144.99414</property>
+      <property
+         name="x">663.5</property>
+   </View>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule6">
+      <property
+         name="activityId">*</property>
+      <property
+         name="y">312.29883</property>
+      <property
+         name="x">863.0</property>
+   </WildcardControlFlowRule>
+   <MethodCall
+      id="MethodCall8">
+      <property
+         name="activityId">throwerror</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>throwerror&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">521.1953</property>
+      <property
+         name="x">646.0</property>
+   </MethodCall>
+   <MethodCall
+      id="MethodCall10">
+      <property
+         name="activityId">handleError</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>handleError&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">283.7412</property>
+      <property
+         name="x">707.0</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="MethodCall10"
+      to="View5">
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="sdm:polyPoints">T50,707.0,230.0918,663.5,198.64355,B50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="View3"
+      to="MethodCall8">
+      <property
+         name="fromOutcome">error</property>
+      <property
+         name="sdm:polyPoints">B50,476.5,420.44824,605.0,520.8447,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="WildcardControlFlowRule6"
+      to="MethodCall10">
+      <property
+         name="fromOutcome">error</property>
+      <property
+         name="sdm:polyPoints">L50,827.0,312.44824,748.0,283.39062,R50</property>
+   </ControlFlowCase>
 </SDM>
