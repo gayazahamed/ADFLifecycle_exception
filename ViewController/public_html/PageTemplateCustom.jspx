@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:pageTemplateDef var="attrs">
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>PageTemplateCustom</display-name>
+        <facet>
+          <facet-name>
+            center
+          </facet-name>
+        </facet>
+        <facet>
+          <facet-name>
+            Top
+          </facet-name>
+        </facet>
+      </component>
+    </af:xmlContent>
+    <af:panelStretchLayout topHeight="50px" id="pt_psl1">
+      <f:facet name="top">
+        <af:facetRef facetName="Top"/>
+      </f:facet>
+      <f:facet name="center">
+        <!-- id="af_one_column_header_stretched"  -->
+        <af:facetRef facetName="center"/>
+      </f:facet>
+    </af:panelStretchLayout>
+  </af:pageTemplateDef>
+</jsp:root>
