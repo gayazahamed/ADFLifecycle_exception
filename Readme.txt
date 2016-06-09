@@ -17,6 +17,28 @@ xmlns="http://xmlns.oracle.com/adf/controller/config">
 
 
 
+to override for one page not for all
+MyAdfListener implements PagePhaseListener{ 
+Extends oracle.adf.controller.v2.PageController class 
+Implements oracle.adf.controller.v2.PagePhaseListener interface 
+value of the page definition's ControllerClass attribute can either be value or expression lang 
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.1.64.93" id="Page1PageDef" Package="view.pageDefs" ControllerClass="view.PageLoadBaseBean">  for now run page1.jspx
+in to override for all put this in adf-settings.xml at ADFLifecycle_exception\ViewController\adfmsrc\META-INF
+<?xml version="1.0" encoding="windows-1252" ?>
+<adf-settings xmlns="http://xmlns.oracle.com/adf/settings">
+<adfc-controller-config 
+xmlns="http://xmlns.oracle.com/adf/controller/config">
+<lifecycle>
+<phase-listener>
+<listener-id>MyAdfListener</listener-id>
+<class>adf.sample. MyAdfListener </class>
+</phase-listener>
+</lifecycle>
+</adfc-controller-config> 
+</adf-settings>
+
+
+
 
 
 
